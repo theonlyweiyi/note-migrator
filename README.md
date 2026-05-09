@@ -2,7 +2,28 @@
 
 小米笔记 → Vivo 原子笔记 迁移工具
 
-## 使用方法
+## 快速开始（推荐）
+
+一键启动图形界面：
+
+```bash
+cd note-migrator
+pip install -e .
+playwright install chromium
+python gui.py
+```
+
+然后在界面中：
+1. **小米笔记** → 点击「连接小米账号」→ 浏览器中登录 → 自动捕获 cookies
+2. **小米笔记** → 点击「导出全部笔记」→ 导出所有笔记到本地
+3. **Vivo原子笔记** → 点击「登录 Vivo 账号」→ 浏览器中登录 → 自动保存 session
+4. **Vivo原子笔记** → 点击「导入全部笔记」→ 自动逐条导入
+
+也可用 `note-migrator gui` 启动。
+
+---
+
+## 命令行方式
 
 ### 1. 安装
 
@@ -55,6 +76,7 @@ note-migrator import status
 
 | 命令 | 说明 |
 |------|------|
+| `gui` | 启动图形界面 |
 | `config init` | 创建配置文件 |
 | `config show` | 查看当前配置 |
 | `config validate` | 验证认证信息 |

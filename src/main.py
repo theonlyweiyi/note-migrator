@@ -176,5 +176,19 @@ def verify_export(
     verify_export(export_dir)
 
 
+
+
+# ── GUI command ─────────────────────────────────────────────
+@app.command("gui")
+def launch_gui():
+    """Launch the graphical user interface"""
+    import subprocess, sys
+    gui_path = Path(__file__).parent.parent / "gui.py"
+    if gui_path.exists():
+        subprocess.run([sys.executable, str(gui_path)])
+    else:
+        console.print("[red]gui.py not found")
+
+
 if __name__ == "__main__":
     app()
