@@ -1,0 +1,30 @@
+# Note Migration Tool Configuration
+# Copy to config.yaml and fill in your credentials
+
+xiaomi:
+  auth:
+    # From i.mi.com browser cookies (F12 → Application → Cookies → i.mi.com)
+    service_token: ""   # Required
+    user_id: ""         # Required
+    pass_token: ""      # Optional but recommended
+  base_url: "https://i.mi.com"
+  request_timeout: 30
+  max_retries: 3
+
+vivo:
+  base_url: "https://pc.vivo.com"
+  session_file: "output/vivo_session.json"
+  headless: false
+  typing_delay_ms: 100
+  max_retries: 3
+
+export:
+  output_dir: "output"
+  concurrency: 3
+  include_archived: false
+  date_format: "%Y-%m-%d %H:%M"
+
+import:
+  checkpoint_file: "output/import_checkpoint.json"
+  delay_between_notes: 2.0
+  max_retries_per_note: 3

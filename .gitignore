@@ -1,0 +1,6 @@
+output/
+*.local.yaml
+__pycache__/
+*.pyc
+.env
+.playwright/
