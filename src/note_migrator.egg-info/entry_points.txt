@@ -1,2 +1,0 @@
-[console_scripts]
-note-migrator = src.main:app
